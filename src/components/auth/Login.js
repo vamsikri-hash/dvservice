@@ -1,13 +1,24 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./reg.css";
 import AuthContext from "../../context/auth/authContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "react-toastify/dist/ReactToastify.minimal.css";
 
-const Login = () => {
+const Login = props => {
   const authContext = useContext(AuthContext);
-  // const { register, error, isAuthenticated, clearErrors } = authContext;
+  const { login, error, clearErrors, isAuthenticated } = authContext;
+  useEffect(() => {
+    if (isAuthenticated) {
+      props.history.push("/home");
+    }
+    if (error === "Invalid credentials") {
+      toast.error("Invalid Credentials");
+    }
+    clearErrors();
+    //eslint-disable-next-line
+  }, [error, isAuthenticated, props.history]);
   const [user, setUser] = useState({
     email: "",
     password: ""
@@ -22,7 +33,7 @@ const Login = () => {
     if (email === "" || password === "") {
       toast.error("empty credentials not allowed");
     } else {
-      console.log(user);
+      login(user);
     }
   };
   return (
@@ -85,7 +96,7 @@ const Login = () => {
               style={{ marginLeft: "50px" }}
             />
             <span style={{ marginLeft: "50px" }}>
-              <a href='#'>Don't have account, create here.</a>
+              <Link to='/signup'>Don't have account, create here.</Link>
             </span>
           </div>
         </div>

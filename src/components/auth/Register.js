@@ -1,13 +1,25 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./reg.css";
 import AuthContext from "../../context/auth/authContext";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "react-toastify/dist/ReactToastify.minimal.css";
 
-const Register = () => {
+const Register = props => {
   const authContext = useContext(AuthContext);
-  // const { register, error, isAuthenticated, clearErrors } = authContext;
+  const { register, error, isAuthenticated, clearErrors } = authContext;
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      props.history.push("/home");
+    }
+    if (error === "Validation failed: Email has already been taken") {
+      toast.error("This email is already registered.");
+    }
+    clearErrors();
+    //eslint-disable-next-line
+  }, [error, isAuthenticated, props.history]);
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -26,7 +38,7 @@ const Register = () => {
     } else if (password !== password_confirmation) {
       alert();
     } else {
-      console.log(user);
+      register(user);
     }
   };
   return (
@@ -126,7 +138,7 @@ const Register = () => {
               style={{ marginLeft: "50px" }}
             />
             <span style={{ marginLeft: "50px" }}>
-              <a href='#'>Already, have an account login here</a>
+              <Link to='/login'>Already, have an account login here</Link>
             </span>
           </div>
         </div>
