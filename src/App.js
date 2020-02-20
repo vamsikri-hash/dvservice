@@ -9,6 +9,9 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import setAuthToken from "./utils/setAuthToken";
 import Navbar from "./components/Layouts/Navbar";
+import ArticleForm from "./components/articles/ArticleForm";
+import ArticleState from "./context/article/ArticleState";
+import ArticleDisplay from "./components/pages/ArticlesDisplay";
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -21,16 +24,20 @@ const App = () => {
   });
   return (
     <AuthState>
-      <Router>
-        <Fragment>
-          <Navbar />
-          <Switch>
-            <Route exact path='/home' component={Home} />
-            <Route exact path='/signup' component={Register} />
-            <Route exact path='/login' component={Login} />
-          </Switch>
-        </Fragment>
-      </Router>
+      <ArticleState>
+        <Router>
+          <Fragment>
+            <Navbar />
+
+            <Switch>
+              <Route exact path='/home' component={Home} />
+              <Route exact path='/signup' component={Register} />
+              <Route exact path='/login' component={Login} />
+              <Route exact path='/articles' component={ArticleDisplay} />
+            </Switch>
+          </Fragment>
+        </Router>
+      </ArticleState>
     </AuthState>
   );
 };

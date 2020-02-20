@@ -18,6 +18,11 @@ const Navbar = ({ title }) => {
             Logout
           </a>
         </li>
+        <li>
+          <Link to='/articles' className='large'>
+            Articles
+          </Link>
+        </li>
       </ul>
     </Fragment>
   );
