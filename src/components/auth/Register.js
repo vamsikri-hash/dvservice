@@ -44,105 +44,118 @@ const Register = props => {
   return (
     <div className='container'>
       <ToastContainer />
-      <form className='col s12 basic-form ' onSubmit={onSubmit}>
-        <h4 className='blue-text text-darken-2 '>Signup</h4>
-        <div className='row'>
-          <div className='input-field col s6'>
-            <i className='material-icons prefix'>account_circle</i>
-            <input
-              id='icon_prefix'
-              type='text'
-              name='name'
-              value={name}
-              onChange={onChange}
-            />
 
-            <label htmlFor='icon_prefix' className='active'>
-              Name
-            </label>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='input-field col s6'>
-            <i className='material-icons prefix'>email</i>
-            <input
-              id='email'
-              type='email'
-              name='email'
-              className='validate'
-              value={email}
-              onChange={onChange}
-            />
-            <label htmlFor='email'>Email</label>
-            <span
-              className='helper-text'
-              data-error='wrong'
-              data-success='right'
-            >
-              example: abc@def.com
-            </span>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='input-field col s6'>
-            <i className='material-icons prefix'>vpn_key</i>
-            <input
-              id='password'
-              type='password'
-              name='password'
-              className='validate'
-              minLength='6'
-              value={password}
-              onChange={onChange}
-            />
-            <label htmlFor='password'>Password</label>
-            <span
-              className='helper-text'
-              data-error='wrong'
-              data-success='right'
-            >
-              minimum 6 charcters
-            </span>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='input-field col s6'>
-            <i className='material-icons prefix'>vpn_key</i>
-            <input
-              id='password_confirmation'
-              type='password'
-              name='password_confirmation'
-              className='validate'
-              minLength='6'
-              value={password_confirmation}
-              onChange={onChange}
-            />
-            <label htmlFor='password_confirmation'>Password Confirmation</label>
-            <span
-              className='helper-text'
-              data-error='wrong'
-              data-success='right'
-            >
-              minimum 6 charcters
-            </span>
-          </div>
-        </div>
+      <div className='col s12 m7'>
+        <div className='card horizontal medium-width card-panel hoverable'>
+          <div className='card-stacked  small'>
+            <div class='card-content'>
+              <form className='col s12  ' onSubmit={onSubmit}>
+                <h4 className='blue-text text-darken-2 mid'>Signup</h4>
+                <div className='row'>
+                  <div className='input-field col s10'>
+                    <i className='material-icons prefix'>account_circle</i>
+                    <input
+                      id='icon_prefix'
+                      type='text'
+                      name='name'
+                      value={name}
+                      onChange={onChange}
+                    />
 
-        <div className='row'>
-          <div className='input-field'>
-            <input
-              type='submit'
-              value='Signup'
-              name='action'
-              className='btn waves-effect waves-light'
-              style={{ marginLeft: "50px" }}
-            />
-            <span style={{ marginLeft: "50px" }}>
-              <Link to='/login'>Already, have an account login here</Link>
-            </span>
+                    <label htmlFor='icon_prefix' className='active'>
+                      Name
+                    </label>
+                  </div>
+                </div>
+                <div className='row'>
+                  <div className='input-field col s10'>
+                    <i className='material-icons prefix'>email</i>
+                    <input
+                      id='email'
+                      type='email'
+                      name='email'
+                      className='validate'
+                      value={email}
+                      onChange={onChange}
+                    />
+                    <label htmlFor='email'>Email</label>
+                    <span
+                      className='helper-text'
+                      data-error='wrong'
+                      data-success='right'
+                    >
+                      example: abc@def.com
+                    </span>
+                  </div>
+                </div>
+                <div className='row'>
+                  <div className='input-field col s10'>
+                    <i className='material-icons prefix'>vpn_key</i>
+                    <input
+                      id='password'
+                      type='password'
+                      name='password'
+                      className='validate'
+                      minLength='6'
+                      value={password}
+                      onChange={onChange}
+                    />
+                    <label htmlFor='password'>Password</label>
+                    <span
+                      className='helper-text'
+                      data-error='wrong'
+                      data-success='right'
+                    >
+                      minimum 6 charcters
+                    </span>
+                  </div>
+                </div>
+                <div className='row'>
+                  <div className='input-field col s10'>
+                    <i className='material-icons prefix'>vpn_key</i>
+                    <input
+                      id='password_confirmation'
+                      type='password'
+                      name='password_confirmation'
+                      className='validate'
+                      minLength='6'
+                      value={password_confirmation}
+                      onChange={onChange}
+                    />
+                    <label htmlFor='password_confirmation'>
+                      Password Confirmation
+                    </label>
+                    <span
+                      className='helper-text'
+                      data-error='wrong'
+                      data-success='right'
+                    >
+                      minimum 6 charcters
+                    </span>
+                  </div>
+                </div>
+
+                <div className='row'>
+                  <div className='input-field'>
+                    <input
+                      type='submit'
+                      value='Signup'
+                      name='action'
+                      className='btn waves-effect waves-light'
+                      style={{ marginLeft: "50px" }}
+                    />
+                    <span style={{ marginLeft: "50px" }}>
+                      <Link to='/login'>
+                        Already, have an account login here
+                      </Link>
+                    </span>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 };

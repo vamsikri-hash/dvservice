@@ -39,68 +39,76 @@ const Login = props => {
   return (
     <div className='container'>
       <ToastContainer />
-      <form className='col s12 basic-form ' onSubmit={onSubmit}>
-        <h4 className='blue-text text-darken-2 '>Login</h4>
+      <div className='col s12 m7'>
+        <div className='card horizontal medium-width card-panel hoverable'>
+          <div className='card-stacked  small'>
+            <div class='card-content'>
+              <form className='col s12 ' onSubmit={onSubmit}>
+                <h4 className='blue-text text-darken-2 mid'>Login</h4>
 
-        <div className='row'>
-          <div className='input-field col s6'>
-            <i className='material-icons prefix'>email</i>
-            <input
-              id='email'
-              type='email'
-              name='email'
-              className='validate'
-              value={email}
-              onChange={onChange}
-            />
-            <label htmlFor='email'>Email</label>
-            <span
-              className='helper-text'
-              data-error='wrong'
-              data-success='right'
-            >
-              example: abc@def.com
-            </span>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='input-field col s6'>
-            <i className='material-icons prefix'>vpn_key</i>
-            <input
-              id='password'
-              type='password'
-              name='password'
-              className='validate'
-              minLength='6'
-              value={password}
-              onChange={onChange}
-            />
-            <label htmlFor='password'>Password</label>
-            <span
-              className='helper-text'
-              data-error='wrong'
-              data-success='right'
-            >
-              minimum 6 charcters
-            </span>
-          </div>
-        </div>
+                <div className='row'>
+                  <div className='input-field col s10'>
+                    <i className='material-icons prefix'>email</i>
+                    <input
+                      id='email'
+                      type='email'
+                      name='email'
+                      className='validate'
+                      value={email}
+                      onChange={onChange}
+                    />
+                    <label htmlFor='email'>Email</label>
+                    <span
+                      className='helper-text'
+                      data-error='wrong'
+                      data-success='right'
+                    >
+                      example: abc@def.com
+                    </span>
+                  </div>
+                </div>
+                <div className='row'>
+                  <div className='input-field col s10'>
+                    <i className='material-icons prefix'>vpn_key</i>
+                    <input
+                      id='password'
+                      type='password'
+                      name='password'
+                      className='validate'
+                      minLength='6'
+                      value={password}
+                      onChange={onChange}
+                    />
+                    <label htmlFor='password'>Password</label>
+                    <span
+                      className='helper-text'
+                      data-error='wrong'
+                      data-success='right'
+                    >
+                      minimum 6 charcters
+                    </span>
+                  </div>
+                </div>
 
-        <div className='row'>
-          <div className='input-field'>
-            <input
-              type='submit'
-              value='Login'
-              name='action'
-              className='btn waves-effect waves-light'
-              style={{ marginLeft: "50px" }}
-            />
-            <span style={{ marginLeft: "50px" }}>
-              <Link to='/signup'>Don't have account, create here.</Link>
-            </span>
+                <div className='row'>
+                  <div className='input-field'>
+                    <input
+                      type='submit'
+                      value='Login'
+                      name='action'
+                      className='btn waves-effect waves-light'
+                      style={{ marginLeft: "50px" }}
+                    />
+                    <span style={{ marginLeft: "50px" }}>
+                      <Link to='/signup'>Don't have account, create here.</Link>
+                    </span>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 };
