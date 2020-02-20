@@ -31,8 +31,8 @@ const AuthState = props => {
       setAuthToken(localStorage.token);
     }
     try {
-      const res = await axios.get(); // user get url
-      //console.log(res.data);
+      const res = await axios.get("http://localhost:3000/auth"); // user get url
+      console.log(res.data);
       dispatch({
         type: USER_LOADED,
         payload: res.data
@@ -54,8 +54,12 @@ const AuthState = props => {
     };
 
     try {
-      const res = await axios.post("", formdata, config); //signup url
-      // console.log(res.data);
+      const res = await axios.post(
+        "http://localhost:3000/signup",
+        formdata,
+        config
+      ); //signup url
+      console.log(res.data);
       dispatch({
         type: REGISTER_SUCCESS,
         payload: res.data
@@ -76,10 +80,14 @@ const AuthState = props => {
         "Content-Type": "application/json"
       }
     };
-    //console.log(formdata);
+    console.log(formdata);
     try {
-      const res = await axios.post("", formdata, config); //Login Url
-      // console.log(res.data);
+      const res = await axios.post(
+        "http://localhost:3000/auth/login",
+        formdata,
+        config
+      ); //Login Url
+      console.log(res.data);
       dispatch({
         type: LOGIN_SUCCESS,
         payload: res.data
