@@ -7,6 +7,11 @@ import Home from "./components/pages/Home";
 import AuthState from "./context/auth/AuthState";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
+import setAuthToken from "./utils/setAuthToken";
+import Navbar from "./components/Layouts/Navbar";
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
 const App = () => {
   useEffect(() => {
@@ -17,8 +22,8 @@ const App = () => {
   return (
     <AuthState>
       <Router>
-        <div className='App'>GEt STarting</div>
         <Fragment>
+          <Navbar />
           <Switch>
             <Route exact path='/home' component={Home} />
             <Route exact path='/signup' component={Register} />
