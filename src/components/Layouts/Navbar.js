@@ -23,6 +23,16 @@ const Navbar = ({ title }) => {
             Articles
           </Link>
         </li>
+        <li>
+          <Link to='/history' className='large'>
+            MyHistory
+          </Link>
+        </li>
+        <li>
+          <Link to='/search' className='large'>
+            Search
+          </Link>
+        </li>
       </ul>
     </Fragment>
   );
@@ -50,9 +60,9 @@ const Navbar = ({ title }) => {
   );
 
   return (
-    <div>
-      <nav>
-        <div className='nav-wrapper'>
+    <div className='navbar-fixed'>
+      <nav className='nav-large'>
+        <div className='nav-wrapper' style={{ backgroundColor: "#2a3c47" }}>
           <a href='#' className='brand-logo'>
             Logo
           </a>
