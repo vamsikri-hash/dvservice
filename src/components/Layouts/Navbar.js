@@ -14,24 +14,25 @@ const Navbar = ({ title }) => {
     <Fragment>
       <ul className='right hide-on-med-and-down'>
         <li>
-          <a onClick={onLogout} href='/' className='large'>
-            Logout
-          </a>
+          <Link to='/search' className='large'>
+            Search
+          </Link>
         </li>
         <li>
           <Link to='/articles' className='large'>
             Articles
           </Link>
         </li>
+
         <li>
           <Link to='/history' className='large'>
             MyHistory
           </Link>
         </li>
         <li>
-          <Link to='/search' className='large'>
-            Search
-          </Link>
+          <a onClick={onLogout} href='/' className='large'>
+            Logout
+          </a>
         </li>
       </ul>
     </Fragment>

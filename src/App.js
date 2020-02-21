@@ -14,6 +14,8 @@ import ArticleDisplay from "./components/pages/ArticlesDisplay";
 import HistoryDisplay from "./components/pages/HistoryDisplay";
 import HistoryState from "./context/history/HistoryState";
 import QueryDisplay from "./components/pages/QueryDisplay";
+import AnswerState from "./context/answers/AnswerState";
+import mylogo from "./mylogo.svg";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -28,22 +30,24 @@ const App = () => {
   return (
     <AuthState>
       <ArticleState>
-        <HistoryState>
-          <Router>
-            <Fragment>
-              <Navbar />
+        <AnswerState>
+          <HistoryState>
+            <Router>
+              <Fragment>
+                <Navbar />
 
-              <Switch>
-                <Route exact path='/home' component={Home} />
-                <Route exact path='/signup' component={Register} />
-                <Route exact path='/login' component={Login} />
-                <Route exact path='/articles' component={ArticleDisplay} />
-                <Route exact path='/history' component={HistoryDisplay} />
-                <Route exact path='/search' component={QueryDisplay} />
-              </Switch>
-            </Fragment>
-          </Router>
-        </HistoryState>
+                <Switch>
+                  <Route exact path='/home' component={Home} />
+                  <Route exact path='/signup' component={Register} />
+                  <Route exact path='/login' component={Login} />
+                  <Route exact path='/articles' component={ArticleDisplay} />
+                  <Route exact path='/history' component={HistoryDisplay} />
+                  <Route exact path='/search' component={QueryDisplay} />
+                </Switch>
+              </Fragment>
+            </Router>
+          </HistoryState>
+        </AnswerState>
       </ArticleState>
     </AuthState>
   );
