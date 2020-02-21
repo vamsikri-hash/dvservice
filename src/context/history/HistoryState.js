@@ -44,11 +44,14 @@ const HistoryState = props => {
         "Content-Type": "Application/json"
       }
     };
+    const ques = {
+      question: obj
+    };
     try {
       console.log(obj);
       const res = await axios.post(
         "http://localhost:3000/api/v1/histories",
-        obj,
+        ques,
         config
       ); //post history url
       console.log(res.data);

@@ -27,3 +27,10 @@ export const CLEAR_ARTICLE_ERROR = "CLEAR_ARTICLE_ERROR";
 export const GET_HISTORIES = "GET_HISTORIES";
 export const ADD_HISTORIES = "ADD_HISTORIES";
 export const HISTORY_ERROR = "HISTORY_ERROR";
+
+//elemsnts regarding search
+
+export const SEARCH_ANSWERS = "SEARCH_ANSWERS";
+export const CLEAR_ANSWERS = "CLEAR_ANSWERS";
+export const ANSWER_ERROR = "ANSWER_ERROR";
+export const SET_LOADING = "SET_LOADING";
