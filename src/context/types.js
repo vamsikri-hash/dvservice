@@ -21,3 +21,9 @@ export const UPDATE_ARTICLE = "UPDATE_ARTICLE";
 export const CLEAR_ARTICLES = "CLEAR_ARTICLES";
 export const ARTICLE_ERROR = "ARTICLE_ERROR";
 export const CLEAR_ARTICLE_ERROR = "CLEAR_ARTICLE_ERROR";
+
+//Elements regarding history
+
+export const GET_HISTORIES = "GET_HISTORIES";
+export const ADD_HISTORIES = "ADD_HISTORIES";
+export const HISTORY_ERROR = "HISTORY_ERROR";
