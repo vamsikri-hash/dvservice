@@ -11,7 +11,7 @@ const Articles = () => {
   }, []);
 
   return (
-    <Fragment>
+    <div style={{ marginTop: "100px" }}>
       <div className='row '>
         <div className='grid-2'>
           {articles !== null ? (
@@ -23,7 +23,7 @@ const Articles = () => {
           )}
         </div>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

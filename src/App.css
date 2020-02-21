@@ -3,3 +3,12 @@
   grid-template-columns: repeat(2, 3fr);
   grid-gap: 1rem;
 }
+
+.nav-large {
+  height: 100px;
+}
+
+.large {
+  font-size: x-large;
+  padding-top: 10px;
+}

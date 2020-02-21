@@ -9,9 +9,12 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import setAuthToken from "./utils/setAuthToken";
 import Navbar from "./components/Layouts/Navbar";
-import ArticleForm from "./components/articles/ArticleForm";
 import ArticleState from "./context/article/ArticleState";
 import ArticleDisplay from "./components/pages/ArticlesDisplay";
+import HistoryDisplay from "./components/pages/HistoryDisplay";
+import HistoryState from "./context/history/HistoryState";
+import QueryDisplay from "./components/pages/QueryDisplay";
+
 if (localStorage.token) {
   setAuthToken(localStorage.token);
 }
@@ -25,18 +28,22 @@ const App = () => {
   return (
     <AuthState>
       <ArticleState>
-        <Router>
-          <Fragment>
-            <Navbar />
+        <HistoryState>
+          <Router>
+            <Fragment>
+              <Navbar />
 
-            <Switch>
-              <Route exact path='/home' component={Home} />
-              <Route exact path='/signup' component={Register} />
-              <Route exact path='/login' component={Login} />
-              <Route exact path='/articles' component={ArticleDisplay} />
-            </Switch>
-          </Fragment>
-        </Router>
+              <Switch>
+                <Route exact path='/home' component={Home} />
+                <Route exact path='/signup' component={Register} />
+                <Route exact path='/login' component={Login} />
+                <Route exact path='/articles' component={ArticleDisplay} />
+                <Route exact path='/history' component={HistoryDisplay} />
+                <Route exact path='/search' component={QueryDisplay} />
+              </Switch>
+            </Fragment>
+          </Router>
+        </HistoryState>
       </ArticleState>
     </AuthState>
   );

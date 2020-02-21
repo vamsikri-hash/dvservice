@@ -94,9 +94,10 @@ const AuthState = props => {
       });
       loaduser();
     } catch (error) {
+      console.log(error);
       dispatch({
         type: LOGIN_FAIL,
-        payload: error.response.data.message
+        payload: error
       });
     }
   };

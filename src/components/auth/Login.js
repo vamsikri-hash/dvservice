@@ -42,7 +42,7 @@ const Login = props => {
       <div className='col s12 m7'>
         <div className='card horizontal medium-width card-panel hoverable'>
           <div className='card-stacked  small'>
-            <div class='card-content'>
+            <div className='card-content'>
               <form className='col s12 ' onSubmit={onSubmit}>
                 <h4 className='blue-text text-darken-2 mid'>Login</h4>
 
