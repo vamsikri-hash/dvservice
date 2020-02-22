@@ -1,0 +1,59 @@
+img {
+  max-width: 75%;
+  height: auto;
+}
+.content {
+  width: 40%;
+}
+
+.setimg {
+  width: 50%;
+}
+.front {
+  display: flex;
+  margin-top: 10%;
+}
+
+.foot {
+  margin-top: 5%;
+}
+
+.page-footer {
+  background-color: #2a3c47;
+}
+.tag-head {
+  font-size: 50px;
+  font-weight: 500;
+  color: #2c3e50;
+  margin-bottom: -46px;
+  margin-left: 10px;
+}
+
+.tag-head2 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #30336b;
+}
+
+.start {
+  width: 100px;
+  background-color: #30336b;
+  width: 55%;
+  height: 4rem;
+  border-radius: 20px;
+}
+.text-size {
+  font-size: 30px;
+  color: whitesmoke;
+}
+
+.content-2 {
+  width: 50%;
+}
+
+.para {
+  font-size: 30px;
+  font-weight: 400;
+  padding-left: 60px;
+  margin-top: 80px;
+}

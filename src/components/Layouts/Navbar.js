@@ -2,6 +2,7 @@ import React, { Fragment, useContext } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import AuthContext from "../../context/auth/authContext";
+import "./nav.css";
 
 const Navbar = ({ title }) => {
   const authContext = useContext(AuthContext);
@@ -64,8 +65,8 @@ const Navbar = ({ title }) => {
     <div className='navbar-fixed'>
       <nav className='nav-large'>
         <div className='nav-wrapper' style={{ backgroundColor: "#2a3c47" }}>
-          <a href='#' className='brand-logo'>
-            Logo
+          <a href='/' className='brand-logo l'>
+            Clears You
           </a>
 
           <ul>{isAuthenticated ? authlinks : guestlinks}</ul>

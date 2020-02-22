@@ -13,6 +13,13 @@ const QueryDisplay = () => {
     <div>
       <SearchBar />
       <Answers />
+      <div>
+        <p>Cant find what you are looking for?</p>
+        <p>Let us help you!!!</p>
+        <button>
+          <a href='#'>Submit a Request</a>
+        </button>
+      </div>
     </div>
   );
 };

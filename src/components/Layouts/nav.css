@@ -1,0 +1,12 @@
+.l {
+  margin-left: 30px;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+.large {
+  margin-left: 30px;
+  margin-top: 10px;
+  font-weight: 400;
+  padding-right: 40px;
+}

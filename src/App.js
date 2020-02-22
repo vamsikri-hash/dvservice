@@ -16,6 +16,9 @@ import HistoryState from "./context/history/HistoryState";
 import QueryDisplay from "./components/pages/QueryDisplay";
 import AnswerState from "./context/answers/AnswerState";
 import mylogo from "./mylogo.svg";
+import Chat from "./components/chat/Chat";
+import FrontPage from "./components/pages/Frontpage";
+import Footer from "./components/pages/Footer";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -36,7 +39,10 @@ const App = () => {
               <Fragment>
                 <Navbar />
 
+                <Chat />
+
                 <Switch>
+                  <Route exact path='/' component={FrontPage} />
                   <Route exact path='/home' component={Home} />
                   <Route exact path='/signup' component={Register} />
                   <Route exact path='/login' component={Login} />
@@ -46,6 +52,7 @@ const App = () => {
                 </Switch>
               </Fragment>
             </Router>
+            <Footer />
           </HistoryState>
         </AnswerState>
       </ArticleState>

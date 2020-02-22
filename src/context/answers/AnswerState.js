@@ -17,7 +17,7 @@ const AnswerState = props => {
   };
 
   const [state, dispatch] = useReducer(answerReducer, initialState);
-  //serach all users particular key word in github managment
+  //serach all
   const searchAnswers = async text => {
     setLoading();
     console.log(text);
@@ -33,17 +33,19 @@ const AnswerState = props => {
       headers: {
         "Content-Type": "application/json",
         Authorization:
-          "Bearer 3kzpQzdyJp4aI3kkeajpza4T2AAHujT36IjsWkh7JyMmIrPo-DBo8K3vilU0GZBXPhurryU9DlH9GWkpqZDgjw"
+          "Bearer vmcG0Sg_-nh5UzGesra_KGnOSZiqw3MlcZgc02RgyDRi8myqGu29gc1_ORjInvuOETjHMDwoxGhSw_UiI4bJsw"
       }
     }; // use auth bearer token here to access
+    // knwbid-1 e88a9db4-1c03-42f9-a7fb-bc2b59aa4aab
     try {
       const res = await axios.post(
-        `https://api.mypurecloud.com/api/v2/knowledge/knowledgebases/e88a9db4-1c03-42f9-a7fb-bc2b59aa4aab/search`,
+        `https://api.mypurecloud.com/api/v2/knowledge/knowledgebases/d4dcf543-6aae-442d-b1b7-ea181cfb0807/search`,
         objj,
         config
       ); //get search url
       console.log(res);
       console.log(res.data.results[0].faq.answer);
+      localStorage.setItem("noteid", res.data.results[0].faq.answer);
       dispatch({
         type: SEARCH_ANSWERS,
         payload: res.data

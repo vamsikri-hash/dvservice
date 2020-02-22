@@ -17,27 +17,30 @@ const SearchBar = () => {
     setquery(e.target.value);
   };
   return (
-    <div>
-      <nav className='at-middle'>
-        <div className='nav-wrapper'>
-          <form onSubmit={onSubmit}>
-            <div className='input-field'>
-              <input
-                id='search'
-                name='query'
-                value={query}
-                type='search'
-                onChange={onChange}
-                required
-              />
-              <label className='label-icon' htmlFor='search'>
-                <i className='material-icons'>search</i>
-              </label>
-              <i className='material-icons'>close</i>
-            </div>
-          </form>
-        </div>
-      </nav>
+    <div className='our-search'>
+      <div className='layer'>
+        <div className='headin'>How Can we help you?</div>
+        <nav className='at-middle'>
+          <div className='nav-wrapper'>
+            <form onSubmit={onSubmit}>
+              <div className='input-field'>
+                <input
+                  id='search'
+                  name='query'
+                  value={query}
+                  type='search'
+                  onChange={onChange}
+                  required
+                />
+                <label className='label-icon' htmlFor='search'>
+                  <i className='material-icons'>search</i>
+                </label>
+                <i className='material-icons'>close</i>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
     </div>
   );
 };
