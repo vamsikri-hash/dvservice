@@ -30,7 +30,7 @@ const ArticleState = props => {
     };
     try {
       const res = await axios.get(
-        "http://localhost:3000/api/v1/articles",
+        "https://genesysservice.herokuapp.com/api/v1/articles",
 
         config
       ); //get articles url
@@ -57,7 +57,7 @@ const ArticleState = props => {
     try {
       console.log(obj);
       const res = await axios.post(
-        "http://localhost:3000/api/v1/articles",
+        "https://genesysservice.herokuapp.com/api/v1/articles",
         obj,
         config
       ); //post article url

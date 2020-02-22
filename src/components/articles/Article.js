@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import ArticleContext from "../../context/article/articleContext";
-import { Link } from "react-router-dom";
 
 const Article = ({ articleitem }) => {
   const articleContext = useContext(ArticleContext);
-  const { DeleteArticle, setCurrent, clearCurrent } = articleContext;
+  const { DeleteArticle, clearCurrent } = articleContext;
 
   const { id, title, content, created_at, updated_at } = articleitem;
   const created = new Date(created_at);
@@ -22,15 +21,15 @@ const Article = ({ articleitem }) => {
     <div className='container'>
       <div className='row'>
         <div className='col s12 '>
-          <div className='card blue-grey lighten-1 card-panel hoverable'>
+          <div className='card  lighten-1 card-panel hoverable'>
             <div className='card-content white-text'>
               <span className='card-title'>
-                {title && <h3 className=''>{title}</h3>}
+                {title && <h3 className='tit'>{title}</h3>}
               </span>
-              {content && <p className=''>{content}</p>}
+              {content && <p className='con'>{content}</p>}
             </div>
             <div className='card-action'>
-              <ul className=''>
+              <ul className='listy'>
                 {created_at && (
                   <li>
                     <span className=''>Created On </span>-

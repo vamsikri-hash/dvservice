@@ -4,7 +4,7 @@ import "./answer.css";
 const Answers = () => {
   const answerContext = useContext(AnswerContext);
   const { answers } = answerContext;
-  const { total, results } = answers;
+  const { results } = answers;
 
   console.log(results);
 
@@ -13,9 +13,9 @@ const Answers = () => {
       {results && (
         <div className='row'>
           <div className='col s12 m6'>
-            <div className='card blue-grey darken-1'>
+            <div className='card blue-grey darken-1 '>
               <div className='card-content white-text'>
-                <p> {results[0].faq.answer}</p>
+                <p style={{ fontSize: "20px" }}> {results[0].faq.answer}</p>
               </div>
             </div>
           </div>
@@ -24,11 +24,14 @@ const Answers = () => {
 
       {results && results[0].faq.alternatives && (
         <div className='row'>
-          <h3>Alternative Question</h3>
+          <h4>You May be Looking for this...</h4>
           <div className='col s12 m6'>
             <div className='card blue-grey darken-1'>
               <div className='card-content white-text'>
-                <p> {results[0].faq.alternatives[0]}</p>
+                <p style={{ fontSize: "20px" }}>
+                  {" "}
+                  {results[0].faq.alternatives[0]}
+                </p>
               </div>
             </div>
           </div>

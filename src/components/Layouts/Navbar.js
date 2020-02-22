@@ -53,9 +53,9 @@ const Navbar = ({ title }) => {
           </Link>
         </li>
         <li>
-          <Link to='/login' className='large'>
+          <a href='/login' className='large'>
             Login
-          </Link>
+          </a>
         </li>
       </ul>
     </Fragment>
@@ -64,9 +64,9 @@ const Navbar = ({ title }) => {
   return (
     <div className='navbar-fixed'>
       <nav className='nav-large'>
-        <div className='nav-wrapper' style={{ backgroundColor: "#2a3c47" }}>
+        <div className='nav-wrapper' style={{ backgroundColor: "#30336b" }}>
           <a href='/' className='brand-logo l'>
-            Clears You
+            Clarifies You
           </a>
 
           <ul>{isAuthenticated ? authlinks : guestlinks}</ul>

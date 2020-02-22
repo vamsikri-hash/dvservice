@@ -11,7 +11,7 @@ const SearchBar = () => {
     e.preventDefault();
     console.log(query);
     answerContext.searchAnswers(query);
-    historyContext.AddHistories(query);
+    //historyContext.AddHistories(query);
   };
   const onChange = e => {
     setquery(e.target.value);
@@ -21,7 +21,10 @@ const SearchBar = () => {
       <div className='layer'>
         <div className='headin'>How Can we help you?</div>
         <nav className='at-middle'>
-          <div className='nav-wrapper'>
+          <div
+            className='nav-wrapper abc'
+            style={{ backgroundColor: "whitesmoke" }}
+          >
             <form onSubmit={onSubmit}>
               <div className='input-field'>
                 <input
@@ -33,7 +36,9 @@ const SearchBar = () => {
                   required
                 />
                 <label className='label-icon' htmlFor='search'>
-                  <i className='material-icons'>search</i>
+                  <i className='material-icons' style={{ color: "black" }}>
+                    search
+                  </i>
                 </label>
                 <i className='material-icons'>close</i>
               </div>

@@ -33,8 +33,8 @@ const App = () => {
   return (
     <AuthState>
       <ArticleState>
-        <AnswerState>
-          <HistoryState>
+        <HistoryState>
+          <AnswerState>
             <Router>
               <Fragment>
                 <Navbar />
@@ -53,8 +53,8 @@ const App = () => {
               </Fragment>
             </Router>
             <Footer />
-          </HistoryState>
-        </AnswerState>
+          </AnswerState>
+        </HistoryState>
       </ArticleState>
     </AuthState>
   );

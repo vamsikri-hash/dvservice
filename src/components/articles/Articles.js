@@ -1,6 +1,7 @@
-import React, { Fragment, useEffect, useContext } from "react";
+import React, { useEffect, useContext } from "react";
 import ArticleContext from "../../context/article/articleContext";
 import Article from "./Article";
+import "./article.css";
 
 const Articles = () => {
   const articleContext = useContext(ArticleContext);
@@ -11,7 +12,7 @@ const Articles = () => {
   }, []);
 
   return (
-    <div style={{ marginTop: "100px" }}>
+    <div className='pg-color' style={{ marginTop: "100px" }}>
       <div className='row '>
         <div className='grid-2'>
           {articles !== null ? (

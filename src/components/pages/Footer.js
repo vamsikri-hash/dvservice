@@ -6,10 +6,9 @@ const Footer = () => {
         <div className='container'>
           <div className='row'>
             <div className='col l6 s12'>
-              <h5 className='white-text'>Footer Content</h5>
+              <h5 className='white-text'>Genesys Solutions</h5>
               <p className='grey-text text-lighten-4'>
-                You can use rows and columns here to organize your footer
-                content.
+                It provides you the best customer experience
               </p>
             </div>
             <div className='col l4 offset-l2 s12'>
@@ -39,7 +38,7 @@ const Footer = () => {
           </div>
         </div>
         <div className='footer-copyright'>
-          <div className='container'>© 2020 Clear Now</div>
+          <div className='container'>© 2020 Clarifies You</div>
         </div>
       </footer>
     </div>

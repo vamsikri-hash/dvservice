@@ -12,7 +12,7 @@ const Register = props => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      props.history.push("/home");
+      props.history.push("/search");
     }
     if (error === "Validation failed: Email has already been taken") {
       toast.error("This email is already registered.");

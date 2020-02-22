@@ -1,19 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, Fragment } from "react";
 import PropTypes from "prop-types";
 import HistoryContext from "../../context/history/historyContext";
-import { Link } from "react-router-dom";
 
 const HistoryItem = ({ historyitem }) => {
   const historyContext = useContext(HistoryContext);
   const {} = historyContext;
+  console.log(historyitem);
 
-  const { id, question, created_at, updated_at } = historyitem;
-  const created = new Date(created_at);
-  const updated = new Date(updated_at);
+  const { id, question, answer } = historyitem;
 
   return (
-    <div className='container'>
-      <li className='collection-item'>{question}</li>
+    <Fragment>
+      <li>
+        <div className='collapsible-header'>
+          <span className='ques'> {question}</span>
+        </div>
+        <div className='collapsible-body ans'>
+          <span>{answer}</span>
+        </div>
+      </li>
       {/*
       <div className='row'>
         <div className='col s12 '>
@@ -42,7 +47,7 @@ const HistoryItem = ({ historyitem }) => {
           </div>
         </div>
                 </div>*/}
-    </div>
+    </Fragment>
   );
 };
 

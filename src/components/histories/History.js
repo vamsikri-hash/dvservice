@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import HistoryContext from "../../context/history/historyContext";
 import HistoryItem from "./HistoryItem";
+import "./history.css";
 
 const History = () => {
   const historyContext = useContext(HistoryContext);
@@ -12,8 +13,9 @@ const History = () => {
 
   return (
     <div style={{ marginTop: "100px" }}>
-      <div className='row '>
-        <ul className='collection'>
+      <p className='head-hist'>Your recent History</p>
+      <div className='hist-list'>
+        <ul className='collapsible'>
           {histories !== null ? (
             histories.map(historyitem => (
               <HistoryItem key={historyitem.id} historyitem={historyitem} />

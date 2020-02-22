@@ -11,7 +11,7 @@ const Login = props => {
   const { login, error, clearErrors, isAuthenticated } = authContext;
   useEffect(() => {
     if (isAuthenticated) {
-      props.history.push("/home");
+      props.history.push("/search");
     }
     if (error === "Invalid credentials") {
       toast.error("Invalid Credentials");

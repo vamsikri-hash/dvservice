@@ -20,7 +20,7 @@ const HistoryState = props => {
     };
     try {
       const res = await axios.get(
-        "http://localhost:3000/api/v1/histories",
+        "https://genesysservice.herokuapp.com/api/v1/histories",
 
         config
       ); //get articles url
@@ -44,13 +44,15 @@ const HistoryState = props => {
         "Content-Type": "Application/json"
       }
     };
+    const { text, ans } = obj;
     const ques = {
-      question: obj
+      question: text,
+      answer: ans
     };
     try {
       console.log(obj);
       const res = await axios.post(
-        "http://localhost:3000/api/v1/histories",
+        "https://genesysservice.herokuapp.com/api/v1/histories",
         ques,
         config
       ); //post history url

@@ -1,7 +1,9 @@
 import React, { useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import SearchBar from "../queries/SearchBar";
 import Answers from "../queries/Answers";
 import AuthContext from "../../context/auth/authContext";
+import "./front.css";
 
 const QueryDisplay = () => {
   const authContext = useContext(AuthContext);
@@ -13,11 +15,18 @@ const QueryDisplay = () => {
     <div>
       <SearchBar />
       <Answers />
-      <div>
-        <p>Cant find what you are looking for?</p>
-        <p>Let us help you!!!</p>
-        <button>
-          <a href='#'>Submit a Request</a>
+      <div className='your-req'>
+        <p className='para'>
+          Can't find what you are looking for? <br />
+          <span style={{ color: "#30336b", paddingLeft: "55px" }}>
+            Let us help you!!!
+          </span>
+        </p>
+
+        <button className='start1'>
+          <Link to='/' className='text-size1'>
+            Submit a Request
+          </Link>
         </button>
       </div>
     </div>

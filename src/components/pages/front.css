@@ -4,22 +4,24 @@ img {
 }
 .content {
   width: 40%;
+  margin-left: 80px;
 }
 
 .setimg {
   width: 50%;
+  margin-left: 40px;
 }
 .front {
   display: flex;
-  margin-top: 10%;
-}
-
-.foot {
   margin-top: 5%;
 }
 
+.foot {
+  margin-top: 10%;
+}
+
 .page-footer {
-  background-color: #2a3c47;
+  background-color: #30336b;
 }
 .tag-head {
   font-size: 50px;
@@ -54,6 +56,29 @@ img {
 .para {
   font-size: 30px;
   font-weight: 400;
-  padding-left: 60px;
+  padding-left: 40px;
   margin-top: 80px;
+}
+
+/* Query display*/
+.start1 {
+  background-color: #30336b;
+  width: 20%;
+  height: 4rem;
+  border-radius: 20px;
+  margin-left: 100px;
+}
+
+.text-size1 {
+  font-size: 20px;
+  color: whitesmoke;
+}
+
+.your-req {
+  margin-left: 35%;
+}
+.setimg1 {
+  width: 50%;
+  height: 60%;
+  margin-left: 60px;
 }

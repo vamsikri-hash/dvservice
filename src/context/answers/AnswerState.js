@@ -1,7 +1,8 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useContext } from "react";
 import axios from "axios";
 import AnswerContext from "./answerContext";
 import answerReducer from "./answerReducer";
+import HistoryContext from "../history/historyContext";
 import {
   SEARCH_ANSWERS,
   CLEAR_ANSWERS,
@@ -10,6 +11,7 @@ import {
 } from "../types";
 
 const AnswerState = props => {
+  const historyContext = useContext(HistoryContext);
   const initialState = {
     answers: [],
     loading: false,
@@ -44,8 +46,10 @@ const AnswerState = props => {
         config
       ); //get search url
       console.log(res);
-      console.log(res.data.results[0].faq.answer);
-      localStorage.setItem("noteid", res.data.results[0].faq.answer);
+      const ans = res.data.results[0].faq.answer;
+      console.log(ans);
+      //localStorage.setItem("noteid", res.data.results[0].faq.answer);
+      historyContext.AddHistories({ text, ans });
       dispatch({
         type: SEARCH_ANSWERS,
         payload: res.data

@@ -1,0 +1,20 @@
+.hist-list {
+  width: 60%;
+  margin-left: 19%;
+}
+
+.head-hist {
+  margin-left: 36%;
+  font-size: xx-large;
+  font-weight: 500;
+}
+
+.ques {
+  font-size: 24px;
+  font-weight: 500;
+  margin-left: 10px;
+  color: #30336b;
+}
+.ans {
+  font-size: 19px;
+}
