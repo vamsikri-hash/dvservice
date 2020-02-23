@@ -48,7 +48,7 @@ const ArticleForm = () => {
   return (
     <div className='container'>
       <ToastContainer />
-      <h1>Create Article</h1>
+      <h1>Submit your Request</h1>
 
       <form onSubmit={onSubmit}>
         <div className='row'>
@@ -76,7 +76,7 @@ const ArticleForm = () => {
               onChange={onChange}
             ></textarea>
             <label htmlFor='textarea1' className='active'>
-              Textarea
+              Description
             </label>
           </div>
         </div>
@@ -84,7 +84,7 @@ const ArticleForm = () => {
           <div className='input-field'>
             <input
               type='submit'
-              value={current ? "Edit Article" : "Add Article"}
+              value={current ? "Edit Article" : "Submit Request"}
               name='action'
               className='btn waves-effect waves-light'
             />

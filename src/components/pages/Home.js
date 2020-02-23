@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import AuthContext from "../../context/auth/authContext";
+import ArticleForm from "../articles/ArticleForm";
 
 const Home = () => {
   const authContext = useContext(AuthContext);
@@ -7,6 +8,10 @@ const Home = () => {
     authContext.loaduser();
     //eslint-disable-next-line
   }, []);
-  return <div>Presetn User Content Here</div>;
+  return (
+    <div>
+      <ArticleForm />
+    </div>
+  );
 };
 export default Home;

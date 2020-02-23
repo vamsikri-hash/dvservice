@@ -24,7 +24,7 @@ const QueryDisplay = () => {
         </p>
 
         <button className='start1'>
-          <Link to='/' className='text-size1'>
+          <Link to='/home' className='text-size1'>
             Submit a Request
           </Link>
         </button>

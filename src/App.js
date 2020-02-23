@@ -19,6 +19,7 @@ import mylogo from "./mylogo.svg";
 import Chat from "./components/chat/Chat";
 import FrontPage from "./components/pages/Frontpage";
 import Footer from "./components/pages/Footer";
+import PrivateRoute from "./components/routing/PrivateRoute";
 
 if (localStorage.token) {
   setAuthToken(localStorage.token);
@@ -43,12 +44,20 @@ const App = () => {
 
                 <Switch>
                   <Route exact path='/' component={FrontPage} />
-                  <Route exact path='/home' component={Home} />
+                  <PrivateRoute exact path='/home' component={Home} />
                   <Route exact path='/signup' component={Register} />
                   <Route exact path='/login' component={Login} />
-                  <Route exact path='/articles' component={ArticleDisplay} />
-                  <Route exact path='/history' component={HistoryDisplay} />
-                  <Route exact path='/search' component={QueryDisplay} />
+                  <PrivateRoute
+                    exact
+                    path='/articles'
+                    component={ArticleDisplay}
+                  />
+                  <PrivateRoute
+                    exact
+                    path='/history'
+                    component={HistoryDisplay}
+                  />
+                  <PrivateRoute exact path='/search' component={QueryDisplay} />
                 </Switch>
               </Fragment>
             </Router>
